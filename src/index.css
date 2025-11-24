@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6750A4;
+  --color-primary-variant: #EADDFF;
+  --color-secondary: #7D5260;
+
+  --color-accent-start: #7E57C2;
+  --color-accent-middle: #42A5F5;
+  --color-accent-end: #26C6DA;
+
+  --color-neutral-bg: #F7F8FA;
+  --color-neutral-card: #FFFFFF;
+  --color-neutral-text-primary: #1F1F1F;
+  --color-neutral-text-secondary: #585858;
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-elevation: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-bg text-neutral-text-primary antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-neutral-card/80 backdrop-blur-md border border-white/20 shadow-soft rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+}
